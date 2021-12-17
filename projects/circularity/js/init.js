@@ -105,7 +105,7 @@ var init = function (window) {
         game.circles = circles;
         game.drawCircle = drawCircle;
         game.update = update;
-        
+        //this is kinda wack//
         app.addUpdateable(window.opspark.game);
     }
 };
