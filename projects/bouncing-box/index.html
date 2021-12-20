@@ -70,8 +70,9 @@
 			turn it around! 
 			*/
 			function update() {
+				moveBoxTo(positionX)
                 positionX += speedX;
-                box.css("left", positionX);
+                //box.css("left", positionX);
                
                 if (positionX > boardWidth) {
                     speedX = -1 * speedX;
@@ -87,11 +88,16 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				debugger;
-                points += 1;
-                box.text(points);
-                speedX += 3;
-                positionX = 0;
+				//debugger;
+				positionX = 0;
+				if (speedX > 0) {
+					speedX = speedX + 3;
+				}
+				else if(speedX < 0){
+					speed = speed - 3;
+				}
+				points += 1;
+                changeBoxText(points);
 			};
 		})();
 	</script>
