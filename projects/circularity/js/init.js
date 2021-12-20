@@ -29,7 +29,7 @@ var init = function (window) {
         function drawCircle() {
             //code to draw a circle
                 circle = draw.randomCircleInArea(canvas, true, true, "#999", 2);
-                physikz.addRandomVelocity(circle, canvas, 11, 19);
+                physikz.addRandomVelocity(circle, canvas, 20, 20);
                 view.addChild(circle);
                 circles.push(circle);
             }
@@ -58,8 +58,8 @@ var init = function (window) {
             // TODO 9 : Iterate over the array  
             for (var i = 0; i < circles.length; i++) {
                 var eachCircle = circles[i];
-                physikz.updatePosition(circles[i]);
-                game.checkCirclePosition(circles[i]);
+                physikz.updatePosition(eachCircle);
+                game.checkCirclePosition(eachCircle);
             }
         }
     
@@ -89,7 +89,7 @@ var init = function (window) {
             
             // TODO 7 : YOUR CODE STARTS HERE //////////////////////
             
-
+         
 
             // YOUR TODO 7 CODE ENDS HERE //////////////////////////
         }
